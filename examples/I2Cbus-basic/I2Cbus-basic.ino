@@ -1,5 +1,5 @@
 /*
-  ens210basic.ino - Basic skeleton showing how to bus clear
+  I2Cbus-basic.ino - Basic skeleton showing how to bus clear
   Created by Maarten Pennings 2018 aug 15
 */
 
@@ -26,13 +26,13 @@ void setup() {
   //Wire.begin(); // Arduino pro mini or Nano [VDD to VCC/3V3, GND to GND, SDA to A4, SCL to A5]
 
   // Setup complete
-  Serial.println("Setup() completed");
+  Serial.println("setup() completed");
 }
 
 
 void loop() {
   if( i2cbusstatus<0 ) Serial.println("Fatal error for I2C bus");
-  if( i2cbusstatus>0 ) Serial.println("Loop can use I2C bus");
-  delay(2000);
+  if( i2cbusstatus>0 ) Serial.println("loop() can use I2C bus");
+  delay(5000);
 }
 
