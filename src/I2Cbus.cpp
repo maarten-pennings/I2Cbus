@@ -92,12 +92,11 @@ int I2Cbus_clear(int sda, int scl) {
 
 
 const char * I2Cbus_statusstr(int status) {
-  if(      status==-1 ) return "Can not correct SCL line being low";
-  else if( status==+1 ) return "Ok (SDA and SCL are already high)";
-  else if( status==-2 ) return "SCL clock line held low by slave clock stretch for >2sec";
-  else if( status==-3 ) return "SDA data line still low after clear";
+  if(      status==-1 ) return "Can not correct SCL being low";
+  else if( status==+1 ) return "Ok (SDA and SCL are high)";
+  else if( status==-2 ) return "SCL held low by slave clock stretch for >2 sec";
+  else if( status==-3 ) return "SDA still low after bus clear";
   else if( status==+2 ) return "Bus repaired from low SDA";
   else                  return "Illegal status code";
-
 }
 
