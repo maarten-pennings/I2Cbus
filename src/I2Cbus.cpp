@@ -42,7 +42,7 @@ int I2Cbus_clear(int sda, int scl) {
     return 1; 
   }
  
-  // Give SCL pulses, see https://www.nxp.com/docs/en/user-guide/UM10204.pdf#page=20
+  // Give SCL pulses, see 3.1.16 Bus clear in https://www.nxp.com/docs/en/user-guide/UM10204.pdf#page=19
   int clockCount = 20; // > 2x9 clock
   while( sda_low && (clockCount>0) ) { 
     clockCount--;
